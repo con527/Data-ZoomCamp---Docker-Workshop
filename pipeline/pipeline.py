@@ -1,0 +1,15 @@
+import sys
+
+import pandas as pd
+
+print("arguments", sys.argv)
+
+month = int(sys.argv[1]) 
+
+
+
+df = pd.DataFrame({"day": [1, 2], "num_passengers": [3, 4]})
+
+print(df.head())
+
+print(f"Running pipeline for month {month}")
