@@ -4,7 +4,7 @@
 
 
 
-import click
+import Click
 import pandas as pd
 from sqlalchemy import create_engine
 from tqdm.auto import tqdm
@@ -98,4 +98,7 @@ def main(pg_user, pg_pass, pg_host, pg_port, pg_db, year, month, target_table, c
 if __name__ == "__main__":
     main()
 
+df = pd.read_csv('taxi_zone_lookup.csv')
+df.head()
 
+df.to_sql(name='zones', con=engine, if_exists='replace')

@@ -10,6 +10,7 @@ month = int(sys.argv[1])
 
 df = pd.DataFrame({"day": [1, 2], "num_passengers": [3, 4]})
 
+df.to_parquet(f"output_{month}.parquet")
 print(df.head())
 
 print(f"Running pipeline for month {month}")
